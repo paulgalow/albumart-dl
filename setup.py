@@ -8,6 +8,7 @@ from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'albumart-dl'
+PACKAGE_NAME = 'albumart_dl'
 DESCRIPTION = "Download HQ album cover art from Apple's iTunes."
 URL = "https://github.com/paulgalow/albumart-dl"
 EMAIL = 'paul.galow@gmail.com'
@@ -38,7 +39,7 @@ except FileNotFoundError:
 # Load the package's __version__.py module as a dictionary.
 about = {}
 if not VERSION:
-    with open(os.path.join(here, NAME, '__version__.py')) as f:
+    with open(os.path.join(here, PACKAGE_NAME, '__version__.py')) as f:
         exec(f.read(), about)
 else:
     about['__version__'] = VERSION
@@ -55,7 +56,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    py_modules=['albumart_dl'],
+    packages=find_packages(exclude=('tests',)),
     install_requires=REQUIRED,
     include_package_data=True,
     license="MIT",
