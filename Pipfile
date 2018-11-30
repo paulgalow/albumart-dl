@@ -10,6 +10,7 @@ black = "*"
 [packages]
 halo = "*"
 requests = "*"
+albumart-dl = {editable = true,path = "."}
 
 [requires]
 python_version = "3"
