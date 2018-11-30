@@ -18,7 +18,7 @@ VERSION = None
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'halo', 'requests',
+    'certifi', 'chardet', 'idna', 'requests', 'urllib3', 'yaspin'
 ]
 
 # The rest you shouldn't have to touch too much :)

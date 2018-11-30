@@ -18,7 +18,7 @@ from sys import exit
 from time import time
 
 # External dependencies
-from halo import Halo
+from yaspin import yaspin
 from requests import get
 
 LOGGER = logging.getLogger(__name__)
@@ -239,7 +239,7 @@ def main():
         urls = search_album_art(OPTION_GROUP.search, OPTION_GROUP.output_path)
 
         # Start waiting animation
-        with Halo(text="Downloading files …", spinner="dots"):
+        with yaspin(text="Downloading files…"):
             # Download album art images in parallel
             with Pool(10) as p:
                 p.map(download_image, urls)

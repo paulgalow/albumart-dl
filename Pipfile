@@ -12,6 +12,8 @@ homebrew-pypi-poet = "*"
 halo = "*"
 requests = "*"
 albumart-dl = {editable = true,path = "."}
+click = "*"
+yaspin = "*"
 
 [requires]
 python_version = "3.7"

@@ -29,4 +29,4 @@ brew install albumart-dl
 
 ## Dependencies
 
-albumart-dl requires Python 3.6+. External libraries used are [halo](https://github.com/manrajgrover/halo) and [requests](https://github.com/requests/requests).
+albumart-dl requires Python 3.6+. External libraries used are [yaspin](https://github.com/pavdmyt/yaspin) and [requests](https://github.com/requests/requests).
