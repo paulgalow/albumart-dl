@@ -57,7 +57,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(exclude=('tests')),
-    entry_points={"console_scripts": "albumart-dl = albumart_dl"},
+    entry_points={"console_scripts": "albumart-dl = albumart_dl.core:main"},
     install_requires=REQUIRED,
     include_package_data=True,
     license="MIT",
