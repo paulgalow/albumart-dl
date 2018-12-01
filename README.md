@@ -25,7 +25,7 @@ Example: Download album art for all of [Brad Mehldau](https://www.bradmehldau.co
 macOS: Install albumart-dl using [Homebrew](https://brew.sh/):
 
 ```bash
-brew tap paulgalow/tap
+brew tap paulgalow/tap && \
 brew install albumart-dl
 ```
 
