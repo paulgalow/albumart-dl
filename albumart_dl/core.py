@@ -16,6 +16,7 @@ import unicodedata
 from multiprocessing import Pool
 from sys import exit
 from time import time
+from .__version__ import __version__
 
 # External dependencies
 from yaspin import yaspin
@@ -49,17 +50,6 @@ def setup_logging():
 
     LOGGER.debug("Exiting 'setup_logging()'")
     return
-
-
-# Retrieve version number from __version__.py
-def get_version():
-    # Load the package's __version__.py module as a dictionary.
-    about = {}
-    with open("__version__.py") as f:
-        exec(f.read(), about)
-
-    return about["__version__"]
-
 
 # Create network connection
 def connect(host, port):
@@ -220,7 +210,7 @@ def main():
     parser.add_argument(
         "--version",
         action="version",
-        version="%(prog)s {version}".format(version=get_version()),
+        version="%(prog)s {version}".format(version=__version__),
         help="Display app version",
     )
 
@@ -250,5 +240,4 @@ def main():
 
 
 if __name__ == "__main__":
-    get_version()
     main()
