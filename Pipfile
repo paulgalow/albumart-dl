@@ -9,10 +9,8 @@ black = "*"
 homebrew-pypi-poet = "*"
 
 [packages]
-halo = "*"
 requests = "*"
 albumart-dl = {editable = true,path = "."}
-click = "*"
 yaspin = "*"
 
 [requires]
